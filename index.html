@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velmira Handmade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <span>♡ Ručně vyráběné produkty s láskou</span>
+    <span>🚚 Rychlé dodání po celé ČR</span>
+    <span>◎ Sledujte nás na Instagramu</span>
+  </div>
+
+  <header class="header">
+    <a class="logo" href="#home">
+      <div class="logo-icon">♡</div>
+      <div>
+        <strong>Velmira</strong>
+        <small>handmade with love</small>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="#home">Domů</a>
+      <a href="#shop">Shop</a>
+      <a href="#collections">Kolekce</a>
+      <a href="#new">Novinky</a>
+      <a href="#about">O nás</a>
+      <a href="#contact">Kontakt</a>
+      <button id="adminOpen" class="admin-link">Admin</button>
+    </nav>
+
+    <div class="icons">
+      <span>⌕</span><span>♡</span><span>🛍️</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">ORIGINÁLNÍ DÁRKY S DUŠÍ ♡</p>
+        <h1>Ručně vyráběné dárky, které potěší <em>každého ♡</em></h1>
+        <p class="hero-description">Kytice, dárkové boxy, personalizované hrnky, přání a mnohem více — vše s láskou a důrazem na detail.</p>
+        <div class="hero-actions">
+          <a href="#shop" class="btn primary">Objevte kolekci</a>
+          <a href="#shop" class="btn secondary">Naše produkty</a>
+        </div>
+        <div class="rating">★★★★★ <span>5.0 · Spokojení zákazníci</span></div>
+      </div>
+      <div class="hero-photo">
+        <img id="heroImage" src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=1200&q=85" alt="Handmade gifts" />
+      </div>
+    </section>
+
+    <section class="features">
+      <div>♡ <strong>Ručně vyráběno</strong><small>Každý produkt je originál</small></div>
+      <div>🎁 <strong>Dárky na míru</strong><small>Přizpůsobíme podle přání</small></div>
+      <div>💎 <strong>Kvalita a detail</strong><small>Pečlivě vybrané materiály</small></div>
+      <div>🚚 <strong>Rychlé dodání</strong><small>Po celé České republice</small></div>
+    </section>
+
+    <section id="shop" class="categories">
+      <h2>Naše kategorie</h2>
+      <p class="heart">♡</p>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section id="about" class="wide-blocks">
+      <div class="about-block">
+        <div>
+          <h2>O nás ♡</h2>
+          <p>Vytváříme produkty, které dělají radost. Každý kousek prochází rukama, které milují detail, estetiku a originalitu.</p>
+          <a href="#contact" class="small-btn">Více o mně</a>
+        </div>
+      </div>
+
+      <div id="contact" class="custom-block">
+        <div class="gift-icon">🎁</div>
+        <div>
+          <h2>Hledáte dárek na míru?</h2>
+          <p>Vytvořím pro Vás personalizovaný dárkový set podle Vašich představ.</p>
+          <a class="small-btn" href="mailto:your@email.com">Napište mi</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>📦 Bezpečné balení</span>
+    <span>📍 Možnost osobního odběru</span>
+    <span>💬 Podpora a komunikace</span>
+    <span>♡ 100% spokojenost</span>
+  </footer>
+
+  <aside id="adminPanel" class="admin-panel">
+    <div class="admin-head">
+      <h2>Admin panel</h2>
+      <button id="adminClose">×</button>
+    </div>
+    <p class="admin-note">Úpravy se ukládají v tomto prohlížeči. Bez backendu nejsou veřejné pro ostatní zařízení.</p>
+
+    <label>Hero image URL</label>
+    <input id="heroInput" type="text" placeholder="Image URL" />
+    <button id="saveHero" class="admin-btn">Save hero image</button>
+
+    <hr>
+    <h3>Produkty</h3>
+    <form id="productForm">
+      <input id="productId" type="hidden" />
+      <label>Název</label>
+      <input id="nameInput" type="text" required />
+      <label>Popis</label>
+      <textarea id="descInput" required></textarea>
+      <label>Cena</label>
+      <input id="priceInput" type="text" placeholder="od 500 Kč" required />
+      <label>Foto URL</label>
+      <input id="imageInput" type="text" required />
+      <button class="admin-btn" type="submit">Save product</button>
+      <button class="admin-btn light" type="button" id="clearForm">Clear form</button>
+    </form>
+
+    <div id="adminList" class="admin-list"></div>
+    <button id="resetData" class="danger">Reset demo data</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
